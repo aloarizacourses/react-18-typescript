@@ -1,4 +1,5 @@
 import useData from "./useData";
+import genres from "../data/genres";
 
 export interface Genre {
   id: number;
@@ -12,7 +13,7 @@ interface FetchGenresResponse {
 }
 
 const useGames = () => {
-  return useData<Genre>("/genres");
+  return { data: genres, isLoading: false, error: null };
 };
 
 export default useGames;
